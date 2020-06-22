@@ -7,8 +7,6 @@ import 'translation.js/chrome-youdao'
 export default {
   translate(queryObj) {
     const api = tjs[queryObj.api]
-    console.log('my-ts');
-    console.log(queryObj);
     return tjs[queryObj.api].translate(queryObj)
   },
   audio(queryObj) {

@@ -113,7 +113,7 @@ function copy() {
 }
 
 const fse = require('fs-extra')
-console.log(111);
+
 /**
  * 打包文件为一个压缩包
  */

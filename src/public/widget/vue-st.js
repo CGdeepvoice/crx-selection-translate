@@ -154,7 +154,7 @@ export default {
         e.preventDefault(); // 点击翻译按钮时防止划选的文本消失掉
         this.query.text = getText();
         this.translate();
-        console.log(this.query.text)
+        console.log(this.query.text); // TODO: post到服务器
       } else if ( !(this.loading || $box.contains( target ) || this.pinned || this.inline) ) {
         this.boxPos.show = false;
       }

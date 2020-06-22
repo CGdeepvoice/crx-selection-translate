@@ -84,8 +84,6 @@ export default Vue.extend( {
      */
     safeTranslate() {
       if ( this.query.text.trim() ) {
-        console.log("87");
-        console.log(this.query.text);
         this.translate();
       }
     } ,
