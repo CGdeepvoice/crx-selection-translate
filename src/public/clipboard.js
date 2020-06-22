@@ -39,5 +39,7 @@ export function read() {
   input.value = '';
   input.focus();
   document.execCommand( 'paste' );
+  console.log("剪切板");
+  console.log(input.value);
   return input.value;
 }

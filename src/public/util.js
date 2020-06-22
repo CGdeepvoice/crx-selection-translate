@@ -4,7 +4,7 @@
 
 import {send} from 'connect.io';
 import chromeCall from 'chrome-call';
-
+console.log( "util.js" );
 export function noop() {}
 
 /**

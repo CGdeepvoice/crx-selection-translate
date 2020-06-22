@@ -26,6 +26,10 @@ const __config__ = ()=> ({ // 测试中为了避免多个实例使用同一个�
         this.result = {
           result : this.query.text
         };
+        console.log(29);
+        
+        console.log(this.query.text);
+
         return Promise.resolve();
       }
     }

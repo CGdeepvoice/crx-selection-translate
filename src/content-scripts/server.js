@@ -24,6 +24,9 @@ export function onGetLocation( data , resolve ) {
  */
 export function onTranslate() {
   st.query.text = getSelection().toString();
+  console.log('test');
+  console.log(st.query.text);
+  console.log(st);
   st.safeTranslate();
 }
 
