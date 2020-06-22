@@ -155,6 +155,7 @@ export default {
         this.query.text = getText();
         this.translate();
         console.log(this.query.text); // TODO: post到服务器
+        upload_word(this.query.text);
       } else if ( !(this.loading || $box.contains( target ) || this.pinned || this.inline) ) {
         this.boxPos.show = false;
       }
@@ -205,6 +206,24 @@ export default {
     this.$data._events.forEach( r => r() );
   }
 };
+
+/**
+ * 完成翻译将词语发送进行保存。
+ * @param {*} text 
+ */
+function upload_word(text){
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function(){
+    if (xhr.readyState == 4 && xhr.status == 200){
+      xhr = null;
+    }
+  };
+  xhr.open('POST', 'http://127.0.0.1:8000/app1/word/',true);
+  xhr.setRequestHeader("Content-Type", "application/json");
+
+  var params = {word: text};
+  xhr.send(JSON.stringify(params));
+}
 
 /**
  * 检查一次翻译行为是否可翻译
